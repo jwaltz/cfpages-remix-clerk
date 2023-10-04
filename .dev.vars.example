@@ -1,3 +1,6 @@
+# copy this file:
+# cp .dev.vars.example .dev.vars
+# and fill out with environment variables
 CLERK_PUBLISHABLE_KEY=
 CLERK_SECRET_KEY=
 
