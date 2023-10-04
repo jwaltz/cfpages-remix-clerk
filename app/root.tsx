@@ -1,4 +1,4 @@
-import { ClerkApp } from "@clerk/remix";
+import { ClerkApp, ClerkErrorBoundary } from "@clerk/remix";
 import { rootAuthLoader } from "@clerk/remix/ssr.server";
 import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/cloudflare";
 import { cssBundleHref } from "@remix-run/css-bundle";
@@ -26,6 +26,8 @@ export const loader = (args: LoaderFunctionArgs) => {
     publishableKey: args.context.env.CLERK_PUBLISHABLE_KEY,
   });
 };
+
+export const ErrorBoundary = ClerkErrorBoundary();
 
 function App() {
   return (
